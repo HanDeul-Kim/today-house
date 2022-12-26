@@ -1,0 +1,25 @@
+{
+  "name": "today-house",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node-sass": "node-sass",
+    "sass": "node-sass -wr styles/main.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HanDeul-Kim/today-house.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HanDeul-Kim/today-house/issues"
+  },
+  "homepage": "https://github.com/HanDeul-Kim/today-house#readme",
+  "description": "",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
