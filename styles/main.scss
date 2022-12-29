@@ -4,7 +4,9 @@
 @import './constans/_typography.scss';
 // icon font
 @import './base/_fonts.scss';
-// reset css
+// reset 
 @import './base/_normalize.scss';
 @import './base/_reset.scss';
+// layout
+@import './layouts/_grids.scss'
 

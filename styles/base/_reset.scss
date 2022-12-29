@@ -1,8 +1,29 @@
-*{padding: 0; margin: 0; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif;}
-a{text-decoration: none; color:inherit;}
-html{
-    font-family: 'Noto Sans KR', sans-serif;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $font-main;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-body{
-    font-family: 'Noto Sans KR', sans-serif;
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    font-family: $font-main;
+    font-size: $font-size-16;
+}
+
+body {
+    font-family: $font-main;
+    color: $primary;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
 }
