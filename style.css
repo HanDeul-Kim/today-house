@@ -490,4 +490,10 @@ li {
       .container .col-lg-12 {
         width: 1140px; } }
 
+p {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.005em;
+  color: #3da5f5; }
+
 /*# sourceMappingURL=style.css.map */

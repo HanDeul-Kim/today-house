@@ -1,12 +1,19 @@
 // 지정 color
 @import './constans/_colors.scss';
+
 // font (typography)
 @import './constans/_typography.scss';
+
 // icon font
 @import './base/_fonts.scss';
+
 // reset 
 @import './base/_normalize.scss';
 @import './base/_reset.scss';
+
 // layout
-@import './layouts/_grids.scss'
+@import './layouts/_grids.scss';
+
+// mixin
+@import './mixins/_text-style.scss';
 
