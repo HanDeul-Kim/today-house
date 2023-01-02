@@ -1,0 +1,65 @@
+%page-item-base {
+    @include inline-flex;
+    @include text-style(16, $primary);
+    font-weight: 700;
+    height: 26px;
+    border-radius: 4px;
+    background-color: $white;
+}
+
+.pagination {
+    @include flex;
+    .page-control {
+        @extend %page-item-base;
+        width: 26px;
+        border: 1px solid $border;
+        &.page-prev {
+            .ic-chevron{
+                transform: rotate(90deg);
+            }
+            margin-right:24px;
+        }
+        &.page-next {
+            .ic-chevron{
+                transform: rotate(-90deg);
+            }
+            margin-left:24px;
+        }
+        &:hover {
+            opacity: 0.4;
+        }
+        .ic-chevron {
+            font-size: 20px;
+        }
+    }
+    .page-list {
+        @include flex;
+        .page-item{
+            margin-right:4px;
+            &:last-child {
+                margin-right:0;
+            }
+            &.is-active {
+                a,
+                button {
+                    background-color: $blue;
+                    color: $white;
+                    &:hover {
+                        color: $white;
+                    }
+                }
+                
+            }
+            a,
+            button {
+                min-width:26px;
+                padding:0 4px;
+                @extend %page-item-base;
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+    
+}

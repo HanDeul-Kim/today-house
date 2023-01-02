@@ -6,66 +6,6 @@
   font-style: normal;
   font-display: block; }
 
-i {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'tomorrow' !important;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.ic-bell:before {
-  content: "\e900"; }
-
-.ic-bookmark:before {
-  content: "\e901"; }
-
-.ic-bookmark-filled:before {
-  content: "\e902"; }
-
-.ic-caret:before {
-  content: "\e903"; }
-
-.ic-cart:before {
-  content: "\e904"; }
-
-.ic-check:before {
-  content: "\e905"; }
-
-.ic-chevron:before {
-  content: "\e906"; }
-
-.ic-close:before {
-  content: "\e907"; }
-
-.ic-community:before {
-  content: "\e908"; }
-
-.ic-expert:before {
-  content: "\e909"; }
-
-.ic-lock:before {
-  content: "\e90a"; }
-
-.ic-menu:before {
-  content: "\e90b"; }
-
-.ic-new:before {
-  content: "\e90c"; }
-
-.ic-search:before {
-  content: "\e90d"; }
-
-.ic-star:before {
-  content: "\e90e"; }
-
-.ic-store:before {
-  content: "\e90f"; }
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -367,6 +307,45 @@ template {
 [hidden] {
   display: none; }
 
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important; }
+
+@media screen and (min-width: 768px) {
+  .sm-only {
+    display: none !important; } }
+
+@media screen and (max-width: 767px) {
+  .md-only {
+    display: none !important; } }
+
+@media screen and (min-width: 1200px) {
+  .md-only {
+    display: none !important; } }
+
+@media screen and (max-width: 1199px) {
+  .lg-only {
+    display: none !important; } }
+
+@media screen and (min-width: 767px) {
+  .sm-hidden {
+    display: none !important; } }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .md-hidden {
+    display: none !important; } }
+
+@media screen and (min-width: 1200px) {
+  .lg-hidden {
+    display: none !important; } }
+
 * {
   padding: 0;
   margin: 0;
@@ -391,6 +370,14 @@ ol,
 ul,
 li {
   list-style: none; }
+
+button {
+  cursor: pointer; }
+
+button, select, input {
+  border: none;
+  outline: none;
+  background: none; }
 
 .tag-red, .tag-green, .tag-gray {
   display: inline-flex;
@@ -514,6 +501,244 @@ li {
     line-height: 24px;
     letter-spacing: -0.01em;
     font-weight: 400; }
+
+.btn-primary, .btn-secondary, .btn-outlined, .btn-ghost {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: background-color 0.2s ease-in-out; }
+  .btn-primary:disabled, .btn-secondary:disabled, .btn-outlined:disabled, .btn-ghost:disabled {
+    opacity: 0.4;
+    cursor: not-allowed; }
+
+.btn-primary {
+  color: #fff;
+  background-color: #3da5f5; }
+  .btn-primary:not(:disabled):hover {
+    background-color: #3186c4; }
+
+.btn-secondary {
+  color: #3f4150;
+  background-color: #e0e2e7; }
+  .btn-secondary:not(:disabled):hover {
+    background-color: #b2b3b9; }
+
+.btn-outlined {
+  color: #3da5f5;
+  border: 1px solid #3da5f5;
+  background-color: #fff; }
+  .btn-outlined:not(:disabled):hover {
+    background-color: #ecf6fe; }
+
+.btn-ghost {
+  color: #3f4150;
+  background-color: transparent; }
+  .btn-ghost:not(:disabled):hover {
+    color: #8c8d96; }
+
+.btn-32 {
+  height: 32px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em; }
+
+.btn-40 {
+  height: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.01em; }
+
+.btn-48 {
+  height: 48px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.01em; }
+
+.btn-55 {
+  height: 55px;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.02em; }
+
+.form-select,
+.form-input {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #3f4150;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 16px;
+  border: 1px solid #e0e2e7;
+  border-radius: 4px;
+  background-color: #fff;
+  appearance: none;
+  transition: background-color 0.2s ease-in-out; }
+  .form-select::placeholder,
+  .form-input::placeholder {
+    color: #b2b3b9; }
+  .form-select:not(:disabled):hover,
+  .form-input:not(:disabled):hover {
+    background-color: #f7f8fa; }
+  .form-select:disabled,
+  .form-input:disabled {
+    opacity: 0.4;
+    cursor: not-allowed; }
+
+.select-group {
+  position: relative; }
+  .select-group.is-active .form-select {
+    border-color: #3da5f5; }
+  .select-group.is-active .ic-caret {
+    color: #3da5f5; }
+  .select-group .form-select {
+    padding-right: 20px;
+    text-overflow: ellipsis; }
+    .select-group .form-select:focus {
+      border-color: #3da5f5; }
+  .select-group .ic-caret {
+    font-size: 24px;
+    color: #b2b3b9;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    pointer-events: none;
+    overflow: hidden; }
+
+.input-group {
+  position: relative; }
+  .input-group .ic-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 20px; }
+  .input-group .form-input {
+    padding-left: 40px; }
+    .input-group .form-input:focus {
+      border-color: #3da5f5; }
+
+.search {
+  font-size: 40px; }
+
+.pagination .page-control, .pagination .page-list .page-item a,
+.pagination .page-list .page-item button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #3f4150;
+  font-weight: 700;
+  height: 26px;
+  border-radius: 4px;
+  background-color: #fff; }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .pagination .page-control {
+    width: 26px;
+    border: 1px solid #e0e2e7; }
+    .pagination .page-control.page-prev {
+      margin-right: 24px; }
+      .pagination .page-control.page-prev .ic-chevron {
+        transform: rotate(90deg); }
+    .pagination .page-control.page-next {
+      margin-left: 24px; }
+      .pagination .page-control.page-next .ic-chevron {
+        transform: rotate(-90deg); }
+    .pagination .page-control:hover {
+      opacity: 0.4; }
+    .pagination .page-control .ic-chevron {
+      font-size: 20px; }
+  .pagination .page-list {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .pagination .page-list .page-item {
+      margin-right: 4px; }
+      .pagination .page-list .page-item:last-child {
+        margin-right: 0; }
+      .pagination .page-list .page-item.is-active a,
+      .pagination .page-list .page-item.is-active button {
+        background-color: #3da5f5;
+        color: #fff; }
+        .pagination .page-list .page-item.is-active a:hover,
+        .pagination .page-list .page-item.is-active button:hover {
+          color: #fff; }
+      .pagination .page-list .page-item a,
+      .pagination .page-list .page-item button {
+        min-width: 26px;
+        padding: 0 4px; }
+        .pagination .page-list .page-item a:hover,
+        .pagination .page-list .page-item button:hover {
+          color: #3da5f5; }
+
+i {
+  font-family: 'tomorrow' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.ic-bell:before {
+  content: "\e900"; }
+
+.ic-bookmark:before {
+  content: "\e901"; }
+
+.ic-bookmark-filled:before {
+  content: "\e902"; }
+
+.ic-caret:before {
+  content: "\e903"; }
+
+.ic-cart:before {
+  content: "\e904"; }
+
+.ic-check:before {
+  content: "\e905"; }
+
+.ic-chevron:before {
+  content: "\e906"; }
+
+.ic-close:before {
+  content: "\e907"; }
+
+.ic-community:before {
+  content: "\e908"; }
+
+.ic-expert:before {
+  content: "\e909"; }
+
+.ic-lock:before {
+  content: "\e90a"; }
+
+.ic-menu:before {
+  content: "\e90b"; }
+
+.ic-new:before {
+  content: "\e90c"; }
+
+.ic-search:before {
+  content: "\e90d"; }
+
+.ic-star:before {
+  content: "\e90e"; }
+
+.ic-store:before {
+  content: "\e90f"; }
 
 /* 
     * MOBILE (max-width: 768px) -----------------------

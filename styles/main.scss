@@ -4,6 +4,7 @@
 
 @import './base/_fonts.scss';
 @import './base/_normalize.scss';
+@import './base/_globals.scss';
 @import './base/_reset.scss';
 
 @import './mixins/_text-style.scss';
@@ -15,5 +16,9 @@
 @import './modules/_avatars.scss';
 @import './modules/_star_rating.scss';
 @import './modules/_price.scss';
+@import './modules/_buttons.scss';
+@import './modules/_forms.scss';
+@import './modules/_pagination.scss';
+@import './modules/_icons.scss';
 
 @import './layouts/_grids.scss';

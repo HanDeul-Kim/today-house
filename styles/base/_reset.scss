@@ -27,3 +27,11 @@ ul,
 li {
     list-style: none;
 }
+button {
+    cursor: pointer;
+}
+button,select,input{
+    border:none;
+    outline: none;
+    background: none;
+}
