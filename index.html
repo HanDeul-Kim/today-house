@@ -22,49 +22,95 @@
 </head>
 
 <body>
-    <header>
-        <h1>
-            <a href="/">
-                <img src="./assets/images/Logo.svg" alt="내일의 집">
-            </a>
-        </h1>
-        <nav class="sm-hidden">
-            <h2 class="visually-hidden">메뉴</h2>
-            <ul>
-                <li><a href="/">커뮤니티</a></li>
-                <li><a href="/">스토어</a></li>
-                <li><a href="/">인테리어시공</a></li>
-            </ul>
-        </nav>
-        <button class="sm-only" type="button" aria-lable="메뉴 버튼">
-            <i class="ic-menu"></i>
-        </button>
-        <button class="lg-hidden" type="button" aria-lable="검색창 열기 버튼">
-            <i class="ic-search"></i>
-        </button>
-        <div class="input-group lg-only">
-            <i class="ic-search" aria-hidden></i>
-            <input class="form-input" type="text" placeholder="스토어 검색창">
-        </div>
-        <a href="/" class="sm-hidden" aria-lable="스크랩북 페이지로 이동">
-            <i class="ic-bookmark"></i>
-        </a>
-        <a href="/" class="sm-hidden" aria-lable="나의 알림 페이지로 이동">
-            <i class="ic-bell"></i>
-        </a>
-        <a href="/" aria-lable="장바구니 페이지로 이동">
-            <i class="ic-cart"></i>
-        </a>
-        <button class="sm-hidden" type="button" aria-label="내 정보 버튼">
-            <div class="avatar-32">
-                <img src="./assets/images/img-user-02.jpg" alt="프로필 사진">
-            </div>
-        </button>
+    <header class="gnb">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="gnb-wrap">
+                        <div class="gnb-left">
+                            <h1 class="logo">
+                                <a href="/">
+                                    <img src="./assets/images/Logo.svg" alt="내일의 집">
+                                </a>
+                            </h1>
+                            <nav class="gnb-nav sm-hidden">
+                                <h2 class="visually-hidden">메뉴</h2>
+                                <ul class="gnb-nav-list">
+                                    <li class="gnb-nav-item"><a href="/">커뮤니티</a></li>
+                                    <li class="gnb-nav-item is-active"><a href="/">스토어</a></li>
+                                    <li class="gnb-nav-item"><a href="/">인테리어시공</a></li>
+                                </ul>
+                            </nav>
+                            <button class="gnb-icon-button is-menu sm-only" type="button" aria-lable="메뉴 버튼">
+                                <i class="ic-menu"></i>
+                            </button>
+                        </div>
+                        <div class="gnb-right">
+                            
+                            <!-- 로그인 했을 경우 -->
+                            <div class="input-group lg-only">
+                                <i class="ic-search" aria-hidden></i>
+                                <input class="form-input" type="text" placeholder="스토어 검색창">
+                            </div>
+                            <div class="button-group">
+                                <button class="gnb-icon-button is-search lg-hidden" type="button" aria-lable="검색창 열기 버튼">
+                                    <i class="ic-search"></i>
+                                </button>
+                                <a href="/" class="gnb-icon-button sm-hidden" aria-lable="스크랩북 페이지로 이동">
+                                    <i class="ic-bookmark"></i>
+                                </a>
+                                <a href="/" class="gnb-icon-button sm-hidden" aria-lable="나의 알림 페이지로 이동">
+                                    <i class="ic-bell"></i>
+                                </a>
+                                <a href="/" class="gnb-icon-button" aria-lable="장바구니 페이지로 이동">
+                                    <i class="ic-cart"></i>
+                                    <strong class="badge">3</strong>
+                                </a>
+                                <div class="my-menu">
+                                    <button class="my-menu-button sm-hidden is-active" type="button" aria-label="내 정보 버튼">
+                                        <img src="./assets/images/img-user-02.jpg" alt="프로필 사진">
+                                    </button>
+                                    <div class="my-menu-content">
+                                        <ul class="my-menu-list">
+                                            <li class="my-menu-item">
+                                                <a href="/">마이페이지</a>
+                                            </li>
+                                            <li class="my-menu-item">
+                                                <a href="/">나의 쇼핑</a>
+                                            </li>
+                                            <li class="my-menu-item">
+                                                <a href="/">이벤트</a>
+                                            </li>
+                                            <li class="my-menu-item">
+                                                <button type="button">로그아웃</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 로그인 안했을 경우 -->
+                            <!-- <div class="button-group">
+                                <button class="gnb-icon-button is-search lg-hidden" type="button" aria-lable="검색창 열기 버튼">
+                                    <i class="ic-search"></i>
+                                </button>
+                                <a href="/" class="gnb-icon-button" aria-lable="장바구니 페이지로 이동">
+                                    <i class="ic-cart"></i>
+                                </a>
+                                <div class="gnb-auth sm-hidden">
+                                    <a href="/">로그인</a>
+                                    <a href="/">회원가입</a>
+                                </div>
+                            </div> -->
 
-        <button class="sm-hidden btn-primary btn-40" type="button" aria-label="">
-            글쓰기
-            <i class="ic-chevron" aria-hidden></i>
-        </button>
+                            <button class="sm-hidden btn-primary btn-40" type="button" aria-label="">
+                                글쓰기
+                                <i class="ic-chevron" aria-hidden></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 </body>
 

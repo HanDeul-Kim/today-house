@@ -1,6 +1,7 @@
 @import './constans/_colors.scss';
 @import './constans/_typography.scss';
 @import './constans/_breakepoint.scss';
+@import './constans/_box-shadow.scss';
 
 @import './base/_fonts.scss';
 @import './base/_normalize.scss';
@@ -21,4 +22,9 @@
 @import './modules/_pagination.scss';
 @import './modules/_icons.scss';
 
+@import './components/_gnb-nav.scss';
+@import './components/_gnb-icon-buttons.scss';
+@import './components/_my-menu.scss';
+
 @import './layouts/_grids.scss';
+@import './layouts/_gnb.scss';

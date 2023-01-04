@@ -1,0 +1,47 @@
+.gnb-icon-button {
+    $badge-size: 16px;
+    position: relative;
+    @include flex;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+    color: $secondary;
+    border-radius: 50%;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    &.is-menu {
+        color: $blue;
+        &:active {
+            color: $blue-dark;
+        }
+    }
+    &:active {
+        color: $primary;
+    }
+    .badge {
+        position: absolute;
+        top: 0; 
+        right: 0;
+        text-align: center;
+        display:block;
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: -0.01em;
+        color: $white;
+        min-width: $badge-size;
+        height: $badge-size;
+        border-radius: $badge-size / 2;
+        background-color: $red;
+        padding:0 4px;
+    }
+    .ic-cart {
+        position: relative;
+        top:1px;
+        right: 1px;
+    }
+    @include responsive(T) {
+        &:hover {
+            color: $white;
+            background-color: $blue;
+        }
+    }
+}
