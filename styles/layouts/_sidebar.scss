@@ -1,0 +1,55 @@
+.sidebar{
+    width: 240px;
+    height: 100vh;
+    padding: 30px 20px;
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &-header {
+        padding: 0 12px;
+    }
+    .logo {
+        @include flex(start);
+        a {
+            display:block;
+        }
+        img {
+            display:block;
+            width:auto;
+            height: 20px;
+        }
+    }
+    &-user,
+    &-auth {
+        @include flex(start);
+        height: 88px;
+    }
+    &-user {
+        a {
+            @include flex(start);
+            @include text-style(14, $primary);
+            font-weight: 700;
+            width: 100%;
+        }
+        .avatar-24 {
+            flex-shrink: 0;
+            margin-right: 8px;
+        }
+        .username {
+            white-space: nowrap;
+            flex-grow: 1;
+            overflow: hidden;
+            text-overflow:ellipsis;
+        }
+    }
+    &-auth {
+        a {
+            width: 84px;
+            &:first-child {
+                margin-right:8px;
+            }
+        }
+    }
+}

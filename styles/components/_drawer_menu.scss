@@ -1,0 +1,100 @@
+body{
+    background: #000;
+}
+.drawer-menu {
+    $drawer-menu-item-height: 36px;
+    $drawer-menu-list-padding: 8px;
+    $community-lentgh: 8;
+    $store-lentgh: 9;
+    $expert-lentgh: 2;
+
+    @mixin calc-max-height($length) {
+        max-height: $drawer-menu-item-height * $length + $community-lentgh;
+    }
+
+    &.is-active {
+        .drawer-menu-button {
+            color: $blue;
+        }
+    }
+    &.is-open {
+        &.is-community {
+            .drawer-menu-content {
+                @include calc-max-height($community-lentgh);
+            }
+        }
+        &.is-store {
+            .drawer-menu-content {
+                @include calc-max-height($store-lentgh);
+            }
+        }
+        &.is-expert {
+            .drawer-menu-content {
+                @include calc-max-height($expert-lentgh);
+            }
+        }
+        .drawer-menu-button i:last-child {
+            transform: translateY(-50%) rotate(180deg);
+        }
+        .drawer-menu-content {
+            max-height: 152px;
+            padding-bottom: $drawer-menu-list-padding;
+        }
+        
+    }
+    
+    &-content {
+        max-height:0;
+        overflow: hidden;
+        transition: max-height 0.2s;
+    }
+
+    &-button {
+        width: 100%;
+        height: 54px;
+        position: relative;
+        @include flex(start);
+        padding: 0 8px;
+        @include text-style(18, $primary);
+        font-weight: 700;
+        transition: color 0.2s ease-in-out;
+        i {
+            &:first-child {
+                position: relative;
+                top: 1px;
+                font-size: 24px;
+                color: $primary;
+                margin-right: 8px;
+            }
+            &:last-child {
+                @include pos-center-y;
+                right: 8px;
+                font-size: 16px;
+                color: $primary;
+                transition: transform 0.3s;
+            }
+        }
+        
+    }
+    
+
+    &-item {
+        &.is-active {
+            a {
+                color: $blue;
+            }
+        }
+        a {
+            @include flex(start);
+            @include text-style(14, $primary);
+            width: 100%;
+            height: $drawer-menu-item-height;
+            padding: 0 12px;
+            font-weight: 700;
+        }
+        .ic-new {
+            font-size: 16px;
+            color: $red;
+        }
+    }
+}
