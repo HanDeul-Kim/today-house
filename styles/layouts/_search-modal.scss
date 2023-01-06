@@ -7,7 +7,11 @@
     background-color: $white;
     padding: 12px 0; 
     overflow-y: auto;
-
+    transform: translate3d(100%, 0, 0);
+    transition: transform 0.3s ease-in-out;
+    &.is-active {
+        transform: translate3d(0, 0, 0)
+    }
     &-form {
         @include flex(between);
        
