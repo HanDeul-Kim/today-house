@@ -2,6 +2,16 @@
     $button-size: 32px;
     $tooltip-size: 12px;
     position: relative;
+    &.is-active {
+        .my-menu-button {
+            border-color: $blue;
+        }
+        .my-menu-content {
+            transform: translateX(-50%) translate3d(0, 0, 0);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
     &-button {
         width: $button-size;
         height: $button-size;
@@ -10,8 +20,7 @@
         overflow: hidden;
         background: url('../../assets/images/img-user-default.png') no-repeat center center / cover;
         transition: border-color 0.2s ease-in-out;
-        &:hover,
-        &.is-active {
+        &:hover {
             border-color: $blue;
         } 
         img {
@@ -27,6 +36,12 @@
         box-shadow: $dropdown-shadow;
         top: $button-size + $tooltip-size;
         border-radius: 4px;
+        transform: translateX(-50%) translate3d(0, -10px, 0);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease-in-out,
+            visibility 0.2s ease-in-out,
+            transform 0.2s ease-in-out;
         &:before,
         &:after {
             content: '';
