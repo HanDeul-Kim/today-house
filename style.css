@@ -869,9 +869,6 @@ i {
     .my-menu-item button:hover {
       background-color: #f7f8fa; }
 
-body {
-  background: #000; }
-
 .drawer-menu.is-active .drawer-menu-button {
   color: #3da5f5; }
 
@@ -889,7 +886,7 @@ body {
 
 .drawer-menu.is-open .drawer-menu-content {
   max-height: 152px;
-  padding-bottom: 8px; }
+  padding-bottom: 20px; }
 
 .drawer-menu-content {
   max-height: 0;
@@ -910,6 +907,8 @@ body {
   color: #3f4150;
   font-weight: 700;
   transition: color 0.2s ease-in-out; }
+  .drawer-menu-button:active {
+    color: #3da5f5; }
   .drawer-menu-button i:first-child {
     position: relative;
     top: 1px;
@@ -940,6 +939,8 @@ body {
   height: 36px;
   padding: 0 12px;
   font-weight: 700; }
+  .drawer-menu-item a:active {
+    color: #3da5f5; }
 
 .drawer-menu-item .ic-new {
   font-size: 16px;
@@ -1115,9 +1116,16 @@ body {
   height: 100vh;
   padding: 30px 20px;
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0; }
+  left: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  z-index: 20;
+  transform: translate3d(-240px, 0, 0);
+  transition: transform 0.3s ease-in-out; }
+  .sidebar.is-active {
+    transform: translate3d(0, 0, 0); }
   .sidebar-header {
     padding: 0 12px; }
   .sidebar .logo {
@@ -1157,5 +1165,40 @@ body {
     width: 84px; }
     .sidebar-auth a:first-child {
       margin-right: 8px; }
+  .sidebar-nav .drawer-menu {
+    border-top: 1px solid #e0e2e7; }
+    .sidebar-nav .drawer-menu.is-expert {
+      border-bottom: 1px solid #e0e2e7; }
+  .sidebar-user-menu {
+    margin-top: 16px; }
+    .sidebar-user-menu .user-menu-item a {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      color: #3f4150;
+      width: 100%;
+      height: 36px;
+      padding: 0 12px; }
+      .sidebar-user-menu .user-menu-item a:active {
+        color: #3da5f5; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(63, 65, 80, 0.5);
+  z-index: 10;
+  touch-action: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; }
+  .overlay.is-active {
+    opacity: 1;
+    visibility: visible; }
 
 /*# sourceMappingURL=style.css.map */

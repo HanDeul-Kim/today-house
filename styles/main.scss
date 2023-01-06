@@ -2,6 +2,7 @@
 @import './constans/_typography.scss';
 @import './constans/_breakepoint.scss';
 @import './constans/_box-shadow.scss';
+@import './constans/_z-index.scss';
 
 @import './base/_fonts.scss';
 @import './base/_normalize.scss';
@@ -30,4 +31,5 @@
 @import './layouts/_grids.scss';
 @import './layouts/_gnb.scss';
 @import './layouts/_sidebar.scss';
+@import './layouts/_overlay.scss';
 
