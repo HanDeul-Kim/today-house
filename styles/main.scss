@@ -3,6 +3,7 @@
 @import './constans/_breakepoint.scss';
 @import './constans/_box-shadow.scss';
 @import './constans/_z-index.scss';
+@import './constans/_dimensions.scss';
 
 @import './base/_fonts.scss';
 @import './base/_normalize.scss';
@@ -28,6 +29,7 @@
 @import './components/_my-menu.scss';
 @import './components/_drawer_menu.scss';
 @import './components/_search_history.scss';
+@import './components/_breadcrumb.scss';
 
 @import './layouts/_grids.scss';
 @import './layouts/_gnb.scss';
@@ -35,6 +37,8 @@
 @import './layouts/_overlay.scss';
 @import './layouts/_search-modal.scss';
 @import './layouts/_lnb.scss';
+@import './layouts/_global-footer.scss';
+@import './layouts/_global-header.scss';
 
 
 

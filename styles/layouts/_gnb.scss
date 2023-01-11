@@ -1,9 +1,10 @@
 .gnb {
     border-bottom: 1px solid $border;
     position: relative;
+    background-color: $white;
     &-wrap {
         @include flex(between);
-        height: 50px;
+        height: $gnb-height-sm - 1px;
     }
     .logo {
         @include pos-center;
@@ -30,6 +31,9 @@
 
     // Tablet
     @include responsive(T) {
+        &-wrap {
+            height: $gnb-height-md - 1px;
+        }
         .logo{
             position: static;
             margin-right:32px;
@@ -69,9 +73,7 @@
                 margin-left: 4px;
             }
         }
-        &-wrap {
-            height: 80px;
-        }
+        
     }
 
     // Desktop
