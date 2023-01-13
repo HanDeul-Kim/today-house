@@ -1048,6 +1048,11 @@ i {
       .breadcrumb a:hover {
         opacity: 0.4; } }
 
+.product-carousel img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
 /* 
     * MOBILE (max-width: 768px) -----------------------
     * size name ----- m
