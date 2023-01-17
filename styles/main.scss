@@ -14,6 +14,7 @@
 @import './mixins/_responsive.scss';
 @import './mixins/_position.scss';
 @import './mixins/_flex.scss';
+@import './mixins/_star-rating.scss';
 
 @import './modules/_tags.scss';
 @import './modules/_avatars.scss';
@@ -31,6 +32,7 @@
 @import './components/_search_history.scss';
 @import './components/_breadcrumb.scss';
 @import './components/_product-carousel.scss';
+@import './components/_product-info.scss';
 
 @import './layouts/_grids.scss';
 @import './layouts/_gnb.scss';
