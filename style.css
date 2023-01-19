@@ -1235,7 +1235,8 @@ i {
       margin-bottom: 2px; }
   @media screen and (min-width: 768px) {
     .product-info {
-      padding: 0; }
+      padding: 0;
+      margin-bottom: 40px; }
       .product-info-header .info-brand {
         display: inline-block;
         margin-bottom: 8px; }
@@ -1583,6 +1584,7 @@ i {
         width: 1140px; } }
 
 .gnb {
+  height: 50px;
   border-bottom: 1px solid #e0e2e7;
   position: relative;
   background-color: #fff; }
@@ -1609,42 +1611,44 @@ i {
   .gnb-right .gnb-icon-button.is-search {
     margin-right: 4px; }
   @media screen and (min-width: 768px) {
-    .gnb-wrap {
-      height: 79px; }
-    .gnb .logo {
-      position: static;
-      margin-right: 32px;
-      transform: translate(0); }
-      .gnb .logo img {
-        height: 24px; }
-    .gnb-left {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center; }
-    .gnb-right {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center; }
-      .gnb-right .button-group {
-        margin-right: 24px; }
-        .gnb-right .button-group .gnb-icon-button {
-          margin-right: 8px; }
-      .gnb-right .gnb-auth {
-        margin-left: 8px; }
-        .gnb-right .gnb-auth a {
-          font-size: 14px;
-          line-height: 24px;
-          letter-spacing: -0.01em;
-          color: #8c8d96;
-          font-weight: 700; }
-          .gnb-right .gnb-auth a:hover {
-            color: #3da5f5; }
-          .gnb-right .gnb-auth a:first-child {
-            margin-right: 12px; }
-    .gnb .btn-primary {
-      width: 88px; }
-      .gnb .btn-primary i {
-        margin-left: 4px; } }
+    .gnb {
+      height: 80px; }
+      .gnb-wrap {
+        height: 79px; }
+      .gnb .logo {
+        position: static;
+        margin-right: 32px;
+        transform: translate(0); }
+        .gnb .logo img {
+          height: 24px; }
+      .gnb-left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; }
+      .gnb-right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center; }
+        .gnb-right .button-group {
+          margin-right: 24px; }
+          .gnb-right .button-group .gnb-icon-button {
+            margin-right: 8px; }
+        .gnb-right .gnb-auth {
+          margin-left: 8px; }
+          .gnb-right .gnb-auth a {
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: -0.01em;
+            color: #8c8d96;
+            font-weight: 700; }
+            .gnb-right .gnb-auth a:hover {
+              color: #3da5f5; }
+            .gnb-right .gnb-auth a:first-child {
+              margin-right: 12px; }
+      .gnb .btn-primary {
+        width: 88px; }
+        .gnb .btn-primary i {
+          margin-left: 4px; } }
   @media screen and (min-width: 1200px) {
     .gnb-search {
       position: relative;
@@ -1909,5 +1913,59 @@ i {
       height: 130px; }
       .global-header .lnb {
         top: 80px; } }
+
+.product-tab {
+  position: sticky;
+  top: 90px;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #e0e2e7;
+  background-color: #fff; }
+  .product-tab-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -15px; }
+  .product-tab-item {
+    width: 20%; }
+    .product-tab-item.is-active button {
+      color: #3da5f5;
+      border-bottom-color: #3da5f5; }
+    .product-tab-item button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 13px;
+      line-height: 20px;
+      letter-spacing: -0.01em;
+      color: #191a20;
+      width: 100%;
+      height: 40px;
+      font-weight: 700;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent; }
+      .product-tab-item button:active {
+        color: #3da5f5; }
+    .product-tab-item .badge {
+      margin-left: 4px;
+      color: #8c8d96; }
+  @media screen and (min-width: 768px) {
+    .product-tab {
+      top: 130px;
+      height: 54px;
+      background-color: #f7f8fa;
+      border-bottom: none; }
+      .product-tab-list {
+        margin: 0; }
+      .product-tab-item button {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        height: 54px; }
+      .product-tab-item .badge {
+        margin-left: 8px; } }
+  @media screen and (min-width: 1200px) {
+    .product-tab-item button:hover {
+      color: #3da5f5; } }
 
 /*# sourceMappingURL=style.css.map */
