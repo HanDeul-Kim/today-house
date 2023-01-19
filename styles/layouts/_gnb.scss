@@ -32,6 +32,7 @@
 
     // Tablet
     @include responsive(T) {
+        height: 80px;
         &-wrap {
             height: $gnb-height-md - 1px;
         }
