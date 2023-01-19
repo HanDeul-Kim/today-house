@@ -1389,11 +1389,6 @@ i {
       line-height: 24px;
       letter-spacing: -0.01em; } }
 
-body {
-  background-color: pink; }
-  body .product-section-header {
-    margin-bottom: 8px; }
-
 .product-section-header {
   position: relative;
   display: flex;
@@ -1417,14 +1412,23 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 0; }
+    right: -15px; }
+    .product-section-header .text-button:active,
+    .product-section-header .icon-button:active {
+      opacity: 0.4; }
   .product-section-header .text-button {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.01em;
     color: #3da5f5;
+    padding: 15px;
     font-weight: 700; }
   .product-section-header .icon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
     font-size: 22px;
     color: #8c8d96; }
     .product-section-header .icon-button.is-right {
@@ -1435,10 +1439,50 @@ body {
       font-size: 18px;
       line-height: 28px;
       letter-spacing: -0.02em; }
+    .product-section-header .text-button,
+    .product-section-header .icon-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0; }
+      .product-section-header .text-button:hover,
+      .product-section-header .icon-button:hover {
+        opacity: 0.4; }
     .product-section-header .text-button {
       font-size: 16px;
       line-height: 24px;
       letter-spacing: -0.01em; } }
+
+.product-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse; }
+  .product-table tr {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.005em;
+    color: #3f4150;
+    text-align: left;
+    border-bottom: 1px solid #e0e2e7;
+    vertical-align: top; }
+  .product-table th,
+  .product-table td {
+    padding: 12px; }
+  .product-table th {
+    width: 112px;
+    font-weight: 400;
+    color: #8c8d96; }
+  .product-table td {
+    padding-left: 0; }
+  @media screen and (min-width: 768px) {
+    .product-table tr {
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.01em; }
+    .product-table th {
+      width: 176px;
+      font-weight: 400;
+      color: #8c8d96; } }
 
 /* 
     * MOBILE (max-width: 768px) -----------------------
